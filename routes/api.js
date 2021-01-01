@@ -25,9 +25,9 @@ module.exports = function (app) {
       if(text===""){
         res.send({error: 'No text to translate'})
       }
-      
+
       let translation = translator.translate(text,locale);
-      res.send({translation:translation});
+      res.send({text:text,translation:translation});
 
     });
 };
