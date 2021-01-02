@@ -5,7 +5,7 @@ const server = require('../server.js');
 
 chai.use(chaiHttp);
 
-suite('Functional Tests', function() {
+suite('Functional Tests ->', function() {
     test('Translation with text and locale fields: POST request to /api/translate',function (done){
         chai.request(server)
         .post('/api/translate')

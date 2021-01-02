@@ -4,7 +4,7 @@ const assert = chai.assert;
 const Translator = require('../components/translator.js');
 let translator = new Translator();
 
-suite('Unit Tests', function() {
+suite('Unit Tests ->', function() {
     
         test('Translate Mangoes are my favorite fruit. to British English', function(done) {
           let text = 'Mangoes are my favorite fruit.';
