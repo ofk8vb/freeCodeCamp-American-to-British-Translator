@@ -5,8 +5,8 @@ const server = require('../server.js');
 
 chai.use(chaiHttp);
 
-suite('Functional Tests', () => {
-    test('Translation with text and locale fields: POST request to /api/translate',(done)=>{
+suite('Functional Tests', function() {
+    test('Translation with text and locale fields: POST request to /api/translate',function (done){
         chai.request(server)
         .post('/api/translate')
         .send({
@@ -20,7 +20,7 @@ suite('Functional Tests', () => {
           });
     })
 
-    test('Translation with text and invalid locale field: POST request to /api/translate',(done)=>{
+    test('Translation with text and invalid locale field: POST request to /api/translate',function (done){
         chai.request(server)
         .post('/api/translate')
         .send({
@@ -34,7 +34,7 @@ suite('Functional Tests', () => {
           });
     })
 
-    test('Translation with missing text field: POST request to /api/translate',(done)=>{
+    test('Translation with missing text field: POST request to /api/translate',function (done){
         chai.request(server)
         .post('/api/translate')
         .send({
@@ -47,7 +47,7 @@ suite('Functional Tests', () => {
           });
     })
 
-    test('Translation with missing locale field: POST request to /api/translate',(done)=>{
+    test('Translation with missing locale field: POST request to /api/translate',function (done){
         chai.request(server)
         .post('/api/translate')
         .send({
@@ -60,7 +60,7 @@ suite('Functional Tests', () => {
           });
     })
 
-    test('Translation with empty text: POST request to /api/translate',(done)=>{
+    test('Translation with empty text: POST request to /api/translate',function (done){
         chai.request(server)
         .post('/api/translate')
         .send({
@@ -74,7 +74,7 @@ suite('Functional Tests', () => {
           });
     })
 
-    test('Translation with text that needs no translation: POST request to /api/translate',(done)=>{
+    test('Translation with text that needs no translation: POST request to /api/translate',function (done){
         chai.request(server)
         .post('/api/translate')
         .send({
